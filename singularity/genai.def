@@ -1,0 +1,15 @@
+bootstrap: docker
+from: nvcr.io/nvidia/pytorch:22.09-py3
+%post
+echo "Conda installing Jupyter..."
+conda update --all
+conda install python=3.10
+conda update --all 
+conda install jupyter chardet cchardet -y
+conda install -c conda-forge jupytext -y
+echo "PIP installing torchdata transformers datasets"
+pip install torch==1.13.0 torchdata transformers datasets
+echo "PIP installing evaluate rouge_score loralib peft"
+pip install evaluate rouge_score loralib peft
+echo "PIP tri..."
+pip install git+https://github.com/lvwerra/trl.git@25fa1bd
