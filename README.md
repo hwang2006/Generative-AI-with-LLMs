@@ -354,6 +354,6 @@ Submitted batch job XXXXXX
 
 ## Reference
 [[DeepLearning.AI Online Course] Generative AI with Large Language Models](https://www.coursera.org/learn/generative-ai-with-llms)  
-[Generative AI with LLMs Practices on Perlmutter](https://github.com/hwang2006/Generative-AI-with-LLMs-Practices-on-Perlmutter)  
+[Generative AI with LLMs Practices on Perlmutter at LBNL/NERSC](https://github.com/hwang2006/Generative-AI-with-LLMs-Practices-on-Perlmutter)  
 
 
