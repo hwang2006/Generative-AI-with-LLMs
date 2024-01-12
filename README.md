@@ -7,6 +7,7 @@
 * [Running Jupyter](#running-jupyter)
 * [Building a Singularity Container Image](#building-a-singularity-container-image)
 * [Running Jupyter Using a Singularity Container Image for Generative AI Practices](#running-jupyter-with-a-singularity-container-image-for-generative-ai-practices)
+* [Lab Exercises](#lab-exercises)
 * [Reference](#reference)
 
 
@@ -352,6 +353,8 @@ Submitted batch job XXXXXX
             XXXXXX    amd_a100nv_8 jupyter_    $USER  RUNNING       0:02   8:00:00      1 gpu30
 ```
 
+## Lab Exercises
+Now, you are ready to do Generative AI with LLMs practices on the jupyter notebook that you have launched. 
 ## Reference
 [[DeepLearning.AI Online Course] Generative AI with Large Language Models](https://www.coursera.org/learn/generative-ai-with-llms)  
 [Generative AI with LLMs Practices on Perlmutter at LBNL/NERSC](https://github.com/hwang2006/Generative-AI-with-LLMs-Practices-on-Perlmutter)  
