@@ -354,7 +354,9 @@ Submitted batch job XXXXXX
 ```
 
 ## Lab Exercises
-Now, you are ready to do Generative AI with LLMs practices on the jupyter notebook that you have launched. 
+Now, you are ready to do Generative AI with LLMs practices on the jupyter notebook that you have launched. After cloing this GitHub repository, you could click on the lab 
+exercises, staring with the **Lab_1_summarize_dialogue.ipynb** that covers dialogue summarization exercises with prompt engineering.  
+
 ## Reference
 [[DeepLearning.AI Online Course] Generative AI with Large Language Models](https://www.coursera.org/learn/generative-ai-with-llms)  
 [Generative AI with LLMs Practices on Perlmutter at LBNL/NERSC](https://github.com/hwang2006/Generative-AI-with-LLMs-Practices-on-Perlmutter)  
