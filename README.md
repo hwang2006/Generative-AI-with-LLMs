@@ -354,8 +354,8 @@ Submitted batch job XXXXXX
 ```
 
 ## Lab Exercises
-Now, you are ready to do Generative AI with LLMs practices. After cloing this GitHub repository on your scratch directory (e.g., /scratch/$USER), you should able to see
-the the lab exercised files through the Jupyter Notebook interface that you have launced. You could start with **Lab_1_summarize_dialogue.ipynb** just by clickihng it that covers prompting and prompt engineering exercises. Instruction and LoRA PEFT fine-tunings are discussed in Lab2 and RLHF exercises are in Lab3.   
+Now, you are ready to do Generative AI with LLMs practices. After cloning this GitHub repository on your scratch directory (e.g., /scratch/$USER), you should able to see
+the the lab exercised files through the Jupyter Notebook interface that you have opened above. You could start with **Lab_1_summarize_dialogue.ipynb** just by clickihng it that covers prompting and prompt engineering exercises. Instruction and LoRA PEFT fine-tunings are discussed in Lab2 and RLHF exercises are in Lab3.   
 
 ## Reference
 [[DeepLearning.AI Online Course] Generative AI with Large Language Models](https://www.coursera.org/learn/generative-ai-with-llms)  
