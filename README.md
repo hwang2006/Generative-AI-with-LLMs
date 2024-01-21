@@ -354,8 +354,6 @@ Submitted batch job XXXXXX
             XXXXXX    amd_a100nv_8 jupyter_    $USER  RUNNING       0:02   8:00:00      1 gpu30
 ```
 
-Once making sure that the jupyter server is running on a computer node, you can open a new terminal to make a SSH client connection and then open a web browser to launch a jupyter client interface as described in the above section.  
-
 ## Lab Exercises
 Now, you are ready to do Generative AI with LLMs practices either using the *genai* conda environment that you have created or the *genai* container image available in the */apps/applications/singularity_images/ngc* directory on Neuron. After cloning this GitHub repository on your scratch directory (e.g., /scratch/$USER), you should able to see the lab exercise files through the Jupyter Notebook interface that you have opened. You could start with *Lab_1_summarize_dialogue.ipynb* just by clickihng it that covers prompting and prompt engineering practices. Instruction and LoRA PEFT fine-tunings are discussed in Lab2 and RLHF practices are in Lab3. Here is an example of how to leverage the singularity *genai* container image for LLMs and Generative AI practices on the Neuron system.   
 ```
@@ -415,9 +413,14 @@ echo "end of the job"
 [glogin01]$ sbatch ./bin/jupyter_run_singularity.sh
 Submitted batch job XXXXXX
 
+[glogin01]$ squeue -u $USER
+             JOBID       PARTITION     NAME     USER    STATE       TIME TIME_LIMI  NODES NODELIST(REASON)
+            XXXXXX    amd_a100nv_8 jupyter_    $USER  RUNNING       0:02   8:00:00      1 gpu##
+
 [glogin01]$ cat port_forwarding_command
 ssh -L localhost:8888:gpu##:##### your-user-id@neuron.ksc.re.kr
 ```
+Once the jupyter server is running on a computer node, you can open a new terminal to make a SSH client connection and then open a web browser to launch a jupyter client interface as described in the above section.  
 
 ![20240112_151939](https://github.com/hwang2006/Generative-AI-with-LLMs/assets/84169368/9099a04b-f95c-4dd2-b234-caa4497d0484)
 
