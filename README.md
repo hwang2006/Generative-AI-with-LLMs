@@ -420,7 +420,7 @@ Submitted batch job XXXXXX
             XXXXXX    amd_a100nv_8 jupyter_    $USER  RUNNING       0:02   8:00:00      1 gpu##
 
 [glogin01]$ cat port_forwarding_command
-ssh -L localhost:8888:gpu##:##### your-user-id@neuron.ksc.re.kr
+ssh -L localhost:8888:gpu##:##### your-account-name@neuron.ksc.re.kr
 ```
 Note that the "sed -i 's/cd \/scratch\/\$USER/...." command above is to replace "cd /scratch/$USER" with "cd /scratch/$USER/Generative-AI-with-LLMs" in the jupyter_run_singularity.sh script, aiming to change the working directory of Jupyter Notebook to the git directory that you have cloned.  
 
