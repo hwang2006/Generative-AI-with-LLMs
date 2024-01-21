@@ -359,13 +359,10 @@ Once making sure that the jupyter server is running on a computer node, you can 
 ## Lab Exercises
 Now, you are ready to do Generative AI with LLMs practices. After cloning this GitHub repository on your scratch directory (e.g., /scratch/$USER), you should able to see the lab exercise files through the Jupyter Notebook interface that you have opened above. You could start with *Lab_1_summarize_dialogue.ipynb* just by clickihng it that covers prompting and prompt engineering practices. Instruction and LoRA PEFT fine-tunings are discussed in Lab2 and RLHF practices are in Lab3.   
 
-![20240112_151939](https://github.com/hwang2006/Generative-AI-with-LLMs/assets/84169368/9099a04b-f95c-4dd2-b234-caa4497d0484)
-
 ```
 [glogin01]$ cd /scratch/$USER
 [glogin01]$ git clone https://github.com/hwang2006/Generative-AI-with-LLMs.git
 [glogin01]$ cd Generative-AI-with-LLMs
-
 [glogin01]$ ls
 ./     doc/                                Lab_2_fine_tune_generative_ai_model.ipynb
 ../    flan-t5-samsum-summarization.ipynb  Lab_3_fine_tune_model_to_detoxify_summaries.ipynb
@@ -414,12 +411,17 @@ singularity run --nv /apps/applications/singularity_images/ngc/genai-pytorch:22.
 #singularity run --nv GenAI.sif jupyter lab --no-browser --ip=0.0.0.0 --port=${PORT_JU} --NotebookApp.token=${USER} #jupyter token: your account ID
 echo "end of the job"
 
-[glogin01]$ sed -i 's/cd \/scratch\/\$USER/cd \/scratch\/\$USER\/Generative-AI-with-LLMs/g' bin/jupyter_run_singularity.sh # switch to the root directory of Jupyter server to the git clone directory
+[glogin01]$ sed -i 's/cd \/scratch\/\$USER/cd \/scratch\/\$USER\/Generative-AI-with-LLMs/g' bin/jupyter_run_singularity.sh # replace "cd /scratch/$USER" to "cd /scratch/$USER/Generative-AI-with-LLMs"
 
-[glogin01]$ sbatch ./bin/jupyter_run_singularity.sh 
+[glogin01]$ sbatch ./bin/jupyter_run_singularity.sh
+Submitted batch job XXXXXX
+
 [glogin01]$ cat port_forwarding_command
 ssh -L localhost:8888:gpu##:##### qualis@neuron.ksc.re.kr
 ```
+
+![20240112_151939](https://github.com/hwang2006/Generative-AI-with-LLMs/assets/84169368/9099a04b-f95c-4dd2-b234-caa4497d0484)
+
 
 ## Reference
 [[DeepLearning.AI Online Course] Generative AI with Large Language Models](https://www.coursera.org/learn/generative-ai-with-llms)  
