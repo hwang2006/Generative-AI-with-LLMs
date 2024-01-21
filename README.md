@@ -365,12 +365,14 @@ Now, you are ready to do Generative AI with LLMs practices. After cloning this G
 [glogin01]$ cd /scratch/$USER
 [glogin01]$ git clone https://github.com/hwang2006/Generative-AI-with-LLMs.git
 [glogin01]$ cd Generative-AI-with-LLMs
+
 [glogin01]$ ls
 ./     doc/                                Lab_2_fine_tune_generative_ai_model.ipynb
 ../    flan-t5-samsum-summarization.ipynb  Lab_3_fine_tune_model_to_detoxify_summaries.ipynb
 bin/   .git/                               README.md
 data/  Lab_1_summarize_dialogue.ipynb      singularity/
-[glogin01]$ cat bin/jupyter_run_singularity.sh
+
+[glogin01]$ cat ./bin/jupyter_run_singularity.sh
 #!/bin/bash
 #SBATCH --comment=pytorch
 ##SBATCH --partition=mig_amd_a100_4
@@ -411,6 +413,12 @@ cd /scratch/$USER  # the root/work directory of Jupyter lab/notebook
 singularity run --nv /apps/applications/singularity_images/ngc/genai-pytorch:22.09-py3.sif jupyter lab --no-browser --ip=0.0.0.0 --port=${PORT_JU} --NotebookApp.token=${USER} #jupyter token: your account ID
 #singularity run --nv GenAI.sif jupyter lab --no-browser --ip=0.0.0.0 --port=${PORT_JU} --NotebookApp.token=${USER} #jupyter token: your account ID
 echo "end of the job"
+
+[glogin01]$ sed -i 's/cd \/scratch\/\$USER/cd \/scratch\/\$USER\/Generative-AI-with-LLMs/g' bin/jupyter_run_singularity.sh # switch to the root directory of Jupyter server to the git clone directory
+
+[glogin01]$ sbatch ./bin/jupyter_run_singularity.sh 
+[glogin01]$ cat port_forwarding_command
+ssh -L localhost:8888:gpu##:##### qualis@neuron.ksc.re.kr
 ```
 
 ## Reference
