@@ -417,7 +417,7 @@ echo "end of the job"
 Submitted batch job XXXXXX
 
 [glogin01]$ cat port_forwarding_command
-ssh -L localhost:8888:gpu##:##### qualis@neuron.ksc.re.kr
+ssh -L localhost:8888:gpu##:##### your-user-id@neuron.ksc.re.kr
 ```
 
 ![20240112_151939](https://github.com/hwang2006/Generative-AI-with-LLMs/assets/84169368/9099a04b-f95c-4dd2-b234-caa4497d0484)
