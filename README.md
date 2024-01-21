@@ -357,7 +357,7 @@ Submitted batch job XXXXXX
 Once making sure that the jupyter server is running on a computer node, you can open a new terminal to make a SSH client connection and then open a web browser to launch a jupyter client interface as described in the above section.  
 
 ## Lab Exercises
-Now, you are ready to do Generative AI with LLMs practices. After cloning this GitHub repository on your scratch directory (e.g., /scratch/$USER), you should able to see the lab exercise files through the Jupyter Notebook interface that you have opened. You could start with *Lab_1_summarize_dialogue.ipynb* just by clickihng it that covers prompting and prompt engineering practices. Instruction and LoRA PEFT fine-tunings are discussed in Lab2 and RLHF practices are in Lab3.   
+Now, you are ready to do Generative AI with LLMs practices either using the *genai* conda environment that you have created or the *genai* Singularity container image available in the */apps/applications/singularity_images/ngc* directory on Neuron. After cloning this GitHub repository on your scratch directory (e.g., /scratch/$USER), you should able to see the lab exercise files through the Jupyter Notebook interface that you have opened. You could start with *Lab_1_summarize_dialogue.ipynb* just by clickihng it that covers prompting and prompt engineering practices. Instruction and LoRA PEFT fine-tunings are discussed in Lab2 and RLHF practices are in Lab3.   
 
 ```
 [glogin01]$ cd /scratch/$USER
