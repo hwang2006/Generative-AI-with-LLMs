@@ -338,7 +338,7 @@ module load singularity/3.9.7
 
 echo "execute jupyter"
 cd /scratch/$USER  # the root/work directory of Jupyter lab/notebook
-singularity run --nv GenAI.sif jupyter lab --no-browser --ip=0.0.0.0 --port=${PORT_JU} --NotebookApp.token=${USER} #jupyter token: your account ID
+singularity run --nv /apps/applications/singularity_images/ngc/genai-pytorch:22.09-py3.sif jupyter lab --no-browser --ip=0.0.0.0 --port=${PORT_JU} --NotebookApp.token=${USER} #jupyter token: your account ID
 echo "end of the job"
 ```
 - launch a jupyter notebook server by submitting the batch script to a worker node. 
