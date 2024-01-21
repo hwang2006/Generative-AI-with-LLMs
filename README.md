@@ -261,7 +261,7 @@ Submitted batch job XXXXXX
 [glogin01]$ cat port_forwarding_command
 ssh -L localhost:8888:gpu##:##### $USER@neuron.ksc.re.kr
 ```
-6. open a SSH client (e.g., Putty, PowerShell, Command Prompt, etc) on your PC or laptop and log in to Neuron just by copying and pasting the port_forwarding_command:
+6. open a new SSH client (e.g., Putty, PowerShell, Command Prompt, etc) on your PC or laptop and log in to Neuron just by copying and pasting the port_forwarding_command:
 ```
 C:\Users\hwang>ssh -L localhost:8888:gpu##:##### $USER@neuron.ksc.re.kr
 Password(OTP):
@@ -299,9 +299,8 @@ pip install git+https://github.com/lvwerra/trl.git@25fa1bd
 [glogin01]$ singularity build --fakeroot GenAI.sif genai.def
 ```
 ## Running Jupyter with a Singularity Container Image for Generative AI Practices
-You can launch a Jupyter notebook server using the GenAI container image that you have created by submitting and running it on a compute node. You can then access it through the SSH tunneling mechanizm by opening a browser on your PC or labtop. Please be aware that with the Singularity container image, there is no need to install the Miniconda3 on your scratch directory and build the conda virtual environment for Generative AI practices. 
-- create a batch script for launching a jupyter notebook server. We assume that you have the Singularity container image called "GenAI.sif" available at your hands. Or, you can use the "genai-pytorch:22.09-py3.sif"
-cotainer image built in the /apps/applications/singularity_images/ngc/ on the Neuron system.  
+You can launch a Jupyter server using the GenAI container image that you have created by submitting and running it on a compute node. You can then access it through the SSH tunneling mechanizm by opening a browser on your PC or labtop. Please be aware that with the Singularity container image, there is no need to install the Miniconda3 on your scratch directory and build the conda virtual environment for Generative AI practices. 
+- create a batch script for launching a jupyter notebook server. We assume that you have the Singularity container image called "GenAI.sif" available at your hands. Or, you can have access to the "genai-pytorch:22.09-py3.sif" cotainer image that is available in the "/apps/applications/singularity_images/ngc" directory on the Neuron system    
 ```
 [glogin01]$  cat jupyter_run_singularity.sh
 #!/bin/bash
@@ -343,17 +342,18 @@ singularity run --nv /apps/applications/singularity_images/ngc/genai-pytorch:22.
 #singularity run --nv GenAI.sif jupyter lab --no-browser --ip=0.0.0.0 --port=${PORT_JU} --NotebookApp.token=${USER} #jupyter token: your account ID
 echo "end of the job"
 ```
-- launch a jupyter notebook server by submitting the batch script to a worker node. 
+- launch a jupyter server by submitting the batch script to a worker node. 
 ```
 [glogin01]$ sbatch jupyter_run_singularity.sh
 Submitted batch job XXXXXX
 ```
-- check if the jupyter notebook server is up and running
+- check if the jupyter server is up and running
 ```
 [glogin01]$ squeue -u $USER
              JOBID       PARTITION     NAME     USER    STATE       TIME TIME_LIMI  NODES NODELIST(REASON)
             XXXXXX    amd_a100nv_8 jupyter_    $USER  RUNNING       0:02   8:00:00      1 gpu30
 ```
+Once making sure the jupyter server is running on a computer node, you can open a new terminal on your PC or Labtop to make a SSH client connection to the jupyter server described in the [Jupyter Running](#jupyter-running).  
 
 ## Lab Exercises
 Now, you are ready to do Generative AI with LLMs practices. After cloning this GitHub repository on your scratch directory (e.g., /scratch/$USER), you should able to see
