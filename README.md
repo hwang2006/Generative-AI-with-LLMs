@@ -423,10 +423,9 @@ Submitted batch job XXXXXX
 [glogin01]$ cat port_forwarding_command
 ssh -L localhost:8888:gpu##:##### your-user-id@neuron.ksc.re.kr
 ```
-Note that the "$sed -i 's/cd \/scratch\/\$USER/...." command is to It replaces "cd /scratch/$USER" with "cd /scratch/$USER/Generative-AI-with-LLMs" in the jupyter_run_singularity.sh file, aiming to change the working directory of Jupyter Notebook starts to the git-cloned directory.
+Note that the "sed -i 's/cd \/scratch\/\$USER/...." command above is to replace "cd /scratch/$USER" with "cd /scratch/$USER/Generative-AI-with-LLMs" in the jupyter_run_singularity.sh script, aiming to change the working directory of Jupyter Notebook to the git directory that you have cloned.  
 
-
-Once the jupyter server is running on a computer node, you can open a new terminal to make a SSH client connection and then open a web browser to launch a jupyter client interface as described in the last part of the [Running Jupyter](#running-jupyter) section.  
+Once the jupyter server is running on a computer node, you can open a new terminal to make a SSH client connection and then open a web browser to launch a Jupyter client interface as described in the last part of the [Running Jupyter](#running-jupyter) section.  
 
 ![20240112_151939](https://github.com/hwang2006/Generative-AI-with-LLMs/assets/84169368/9099a04b-f95c-4dd2-b234-caa4497d0484)
 
