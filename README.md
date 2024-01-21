@@ -300,7 +300,7 @@ pip install git+https://github.com/lvwerra/trl.git@25fa1bd
 ```
 ## Running Jupyter with a Singularity Container Image for Generative AI Practices
 You can launch a Jupyter server using the GenAI container image that you have created by submitting and running it on a compute node. You can then access it through the SSH tunneling mechanizm by opening a browser on your PC or labtop. Please be aware that with the Singularity container image, there is no need to install the Miniconda3 on your scratch directory and build the conda virtual environment for Generative AI practices. 
-- create a batch script for launching a jupyter notebook server. We assume that you have the Singularity container image called "GenAI.sif" available at your hands. Or, you can have access to the "genai-pytorch:22.09-py3.sif" cotainer image that is available in the "/apps/applications/singularity_images/ngc" directory on the Neuron system    
+- create a batch script for launching a jupyter notebook server. We assume that you have the Singularity container image called "GenAI.sif" available at your hands. Or, you can have access to the "genai-pytorch:22.09-py3.sif" cotainer image that is available in the "/apps/applications/singularity_images/ngc" directory on the Neuron system. Note that the "sed    
 ```
 [glogin01]$  cat jupyter_run_singularity.sh
 #!/bin/bash
@@ -423,6 +423,9 @@ Submitted batch job XXXXXX
 [glogin01]$ cat port_forwarding_command
 ssh -L localhost:8888:gpu##:##### your-user-id@neuron.ksc.re.kr
 ```
+Note that the "$sed -i 's/cd \/scratch\/\$USER/...." command is to It replaces "cd /scratch/$USER" with "cd /scratch/$USER/Generative-AI-with-LLMs" in the jupyter_run_singularity.sh file, aiming to change the working directory of Jupyter Notebook starts to the git-cloned directory.
+
+
 Once the jupyter server is running on a computer node, you can open a new terminal to make a SSH client connection and then open a web browser to launch a jupyter client interface as described in the last part of the [Running Jupyter](#running-jupyter) section.  
 
 ![20240112_151939](https://github.com/hwang2006/Generative-AI-with-LLMs/assets/84169368/9099a04b-f95c-4dd2-b234-caa4497d0484)
