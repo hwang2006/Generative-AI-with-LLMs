@@ -404,7 +404,6 @@ echo "ssh -L localhost:8888:${SERVER}:${PORT_JU} ${USER}@neuron.ksc.re.kr"
 echo "load module-environment"
 module load singularity/3.9.7
 
-
 echo "execute jupyter"
 cd /scratch/$USER  # the root/work directory of Jupyter lab/notebook
 singularity run --nv /apps/applications/singularity_images/ngc/genai-pytorch:22.09-py3.sif jupyter lab --no-browser --ip=0.0.0.0 --port=${PORT_JU} --NotebookApp.token=${USER} #jupyter token: your account ID
