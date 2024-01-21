@@ -299,8 +299,9 @@ pip install git+https://github.com/lvwerra/trl.git@25fa1bd
 [glogin01]$ singularity build --fakeroot GenAI.sif genai.def
 ```
 ## Running Jupyter with a Singularity Container Image for Generative AI Practices
-You can launch a Jupyter notebook server using the GenAI container image that you have created by submitting and running it on a worker node. You can then access it through the SSH tunneling mechanizm by opening a browser on your PC or labtop. Please be aware that with the Singularity container image, there is no need to install the Miniconda3 on your scratch directory and build the conda virtual environment for Generative AI practices. 
-- create a batch script for launching a jupyter notebook server. We assume that you have the Singularity container image called "GenAI.sif" available at your hands. 
+You can launch a Jupyter notebook server using the GenAI container image that you have created by submitting and running it on a compute node. You can then access it through the SSH tunneling mechanizm by opening a browser on your PC or labtop. Please be aware that with the Singularity container image, there is no need to install the Miniconda3 on your scratch directory and build the conda virtual environment for Generative AI practices. 
+- create a batch script for launching a jupyter notebook server. We assume that you have the Singularity container image called "GenAI.sif" available at your hands. Or, you can use the "genai-pytorch:22.09-py3.sif"
+cotainer image built in the /apps/applications/singularity_images/ngc/ on the Neuron system.  
 ```
 [glogin01]$  cat jupyter_run_singularity.sh
 #!/bin/bash
@@ -338,6 +339,7 @@ module load singularity/3.9.7
 
 echo "execute jupyter"
 cd /scratch/$USER  # the root/work directory of Jupyter lab/notebook
+#singularity run --nv GenAI.sif jupyter lab --no-browser --ip=0.0.0.0 --port=${PORT_JU} --NotebookApp.token=${USER} #jupyter token: your account ID
 singularity run --nv /apps/applications/singularity_images/ngc/genai-pytorch:22.09-py3.sif jupyter lab --no-browser --ip=0.0.0.0 --port=${PORT_JU} --NotebookApp.token=${USER} #jupyter token: your account ID
 echo "end of the job"
 ```
