@@ -420,7 +420,7 @@ Submitted batch job XXXXXX
 [glogin01]$ cat port_forwarding_command
 ssh -L localhost:8888:gpu##:##### your-user-id@neuron.ksc.re.kr
 ```
-Once the jupyter server is running on a computer node, you can open a new terminal to make a SSH client connection and then open a web browser to launch a jupyter client interface as described in the above section.  
+Once the jupyter server is running on a computer node, you can open a new terminal to make a SSH client connection and then open a web browser to launch a jupyter client interface as described in the [Running Jupyter](#running-jupyter) section.  
 
 ![20240112_151939](https://github.com/hwang2006/Generative-AI-with-LLMs/assets/84169368/9099a04b-f95c-4dd2-b234-caa4497d0484)
 
