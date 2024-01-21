@@ -353,7 +353,8 @@ Submitted batch job XXXXXX
              JOBID       PARTITION     NAME     USER    STATE       TIME TIME_LIMI  NODES NODELIST(REASON)
             XXXXXX    amd_a100nv_8 jupyter_    $USER  RUNNING       0:02   8:00:00      1 gpu30
 ```
-- Once making sure that the jupyter server is running on a computer node, you can open a new terminal on your PC or Labtop to make a SSH client connection and launch a web browser for a jupyter client interface as described in the above section.  
+
+Once making sure that the jupyter server is running on a computer node, you can open a new terminal to make a SSH client connection and launch a web browser for a jupyter client interface as described in the above section.  
 
 ## Lab Exercises
 Now, you are ready to do Generative AI with LLMs practices. After cloning this GitHub repository on your scratch directory (e.g., /scratch/$USER), you should able to see
