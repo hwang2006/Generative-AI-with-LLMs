@@ -369,6 +369,8 @@ If you have an account on Neuron, here is a QuickStart guide to get *Generative 
 bin/   .git/                               README.md
 data/  Lab_1_summarize_dialogue.ipynb      singularity/
 
+[glogin01]$ sed -i 's/cd \/scratch\/\$USER/cd \/scratch\/\$USER\/Generative-AI-with-LLMs/g' ./bin/jupyter_run_singularity.sh 
+
 [glogin01]$ cat ./bin/jupyter_run_singularity.sh
 #!/bin/bash
 #SBATCH --comment=pytorch
@@ -405,12 +407,10 @@ echo "load module-environment"
 module load singularity/3.9.7
 
 echo "execute jupyter"
-cd /scratch/$USER  # the root/work directory of Jupyter lab/notebook
+cd /scratch/$USER/Generative-AI-with-LLMs  # the root/work directory of Jupyter lab/notebook
 singularity run --nv /apps/applications/singularity_images/ngc/genai-pytorch:22.09-py3.sif jupyter lab --no-browser --ip=0.0.0.0 --port=${PORT_JU} --NotebookApp.token=${USER} #jupyter token: your account ID
 #singularity run --nv GenAI.sif jupyter lab --no-browser --ip=0.0.0.0 --port=${PORT_JU} --NotebookApp.token=${USER} #jupyter token: your account ID
 echo "end of the job"
-
-[glogin01]$ sed -i 's/cd \/scratch\/\$USER/cd \/scratch\/\$USER\/Generative-AI-with-LLMs/g' ./bin/jupyter_run_singularity.sh 
 
 [glogin01]$ sbatch ./bin/jupyter_run_singularity.sh
 Submitted batch job XXXXXX
@@ -424,7 +424,7 @@ ssh -L localhost:8888:gpu##:##### your-account-name@neuron.ksc.re.kr
 ```
 Note that the "sed -i 's/cd \/scratch\/\$USER/...." command above is to replace "cd /scratch/$USER" with "cd /scratch/$USER/Generative-AI-with-LLMs" in the jupyter_run_singularity.sh script, aiming to change the working directory of Jupyter Notebook to the git directory that you have cloned.  
 
-Once the jupyter server is running on a computer node, you can open a new terminal to make a SSH client connection and then open a web browser to launch a Jupyter client interface as described in the last part of the [Running Jupyter](#running-jupyter) section.  
+Once the jupyter server is running on a computer node, you can open a new terminal to make a SSH client connection using the port_forwarding_command and then open a web browser to launch a Jupyter client interface as described in the last part of the [Running Jupyter](#running-jupyter) section.  
 
 ![20240112_151939](https://github.com/hwang2006/Generative-AI-with-LLMs/assets/84169368/9099a04b-f95c-4dd2-b234-caa4497d0484)
 
