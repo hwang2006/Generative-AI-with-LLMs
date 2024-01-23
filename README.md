@@ -268,7 +268,7 @@ ssh -L localhost:8888:gpu##:##### $USER@neuron.ksc.re.kr
 8. open a web browser on your PC or laptop to access the jupyter server
 ```
 URL Address: localhost:8888
-Password or token: $USER    # your account ID on Neuron
+Password or token: $USER    # your account name on Neuron
 ```
 <p align="center"><img src="https://user-images.githubusercontent.com/84169368/218938419-f38c356b-e682-4b1c-9add-6cfc29d53425.png"/></p> 
 
