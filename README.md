@@ -426,7 +426,7 @@ Note that the "sed -i 's/cd \/scratch\/\$USER/...." command above is to replace 
 
 Once the jupyter server is up and running on a computer node, you can open a new terminal to make a SSH client connection using the port_forwarding_command and then open a web browser to launch a Jupyter client interface as described in the last part of the [Running Jupyter](#running-jupyter) section.  
 
-![20240112_151939](https://github.com/hwang2006/Generative-AI-with-LLMs/assets/84169368/9099a04b-f95c-4dd2-b234-caa4497d0484)
+![20240123_092630](https://github.com/hwang2006/Generative-AI-with-LLMs/assets/84169368/d8a291bb-65e0-4c2f-a9d8-bc724fbb7034)
 
 
 ## Reference
