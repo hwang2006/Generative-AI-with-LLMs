@@ -7,7 +7,7 @@
 * [Running Jupyter](#running-jupyter)
 * [Building a Singularity Container Image](#building-a-singularity-container-image)
 * [Running Jupyter Using a Singularity Container Image for Generative AI Practices](#running-jupyter-with-a-singularity-container-image-for-generative-ai-practices)
-* [Lab Exercises](#lab-exercises)
+* [Lab Exercises with a QuickStart Guide](#lab-exercises-with-a-quickstart-guide)
 * [Reference](#reference)
 
 
@@ -352,7 +352,7 @@ Submitted batch job XXXXXX
             XXXXXX    amd_a100nv_8 jupyter_    $USER  RUNNING       0:02   8:00:00      1 gpu30
 ```
 
-## Lab Exercises
+## Lab Exercises and a QuickStart Guide
 Now, you are ready to do Generative AI with LLMs practices either using the *genai* conda environment that you have created or the *genai* container image available in thr cloning this GitHub repository on your scratch directory (e.g., /scratch/$USER), you should able to see the lab exercise files through the Jupyter Notebook interface that you have opened. You could start with *Lab_1_summarize_dialogue.ipynb* just by clickihng it that covers prompting and prompt engineering practices. Instruction and LoRA PEFT fine-tunings are discussed in Lab2 and RLHF practices are in Lab3. 
 
 Here is a **QuickStart guide** to get hands-on exercises for *Generative AI with LLMs* kicked off on Neuron, even with no need to create the conda virtual environment, by leveraging the Singularity *genai* container image located in the /apps/applications/singularity_images/ngc directory.
