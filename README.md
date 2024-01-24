@@ -1,6 +1,8 @@
 # Generarive AI with LLMs Practices on a Supercomputer
 
-Generative AI with LLMs refers to the use of large language models like GPT-3 for generating human-like content, spanning text, images and even code. LLMs are trained on a vast amount of data and code, and usually carefully prompt-engineered or fine-tuned to suit specific downstream tasks such as Chatbots, Translation, Question Answering and Summarization. This repository is intended to share and promote best practices for Generative AI using LLMs on a supercomputer. The python codes in the Lab exercises are sourced from the 16-hour [Generative AI with LLMs Online Course](https://www.coursera.org/learn/generative-ai-with-llms) offered by the DeepLearning.AI. 
+Generative AI with LLMs refers to the use of large language models like GPT-3 for generating human-like content, spanning text, images and even code. LLMs are trained on a vast amount of data and code, and usually carefully prompt-engineered or fine-tuned to suit specific downstream tasks such as Chatbots, Translation, Question Answering and Summarization. 
+
+This repository is intended to share and promote best practices for Generative AI using LLMs on a supercomputer. The python codes in the Lab exercises are sourced from the 16-hour [Generative AI with LLMs Online Course](https://www.coursera.org/learn/generative-ai-with-llms) offered by the DeepLearning.AI. 
 
 **Contents**
 * [KISTI Neuron GPU Cluster](#kisti-neuron-gpu-cluster)
