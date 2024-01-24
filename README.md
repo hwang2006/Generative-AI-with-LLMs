@@ -359,8 +359,9 @@ Submitted batch job XXXXXX
 ## Lab Exercises with a QuickStart Guide
 Now, you are ready to do Generative AI with LLMs practices either using the *genai* conda environment that you have created or the *genai* container image available in thr cloning this GitHub repository on your scratch directory (e.g., /scratch/$USER), you should able to see the lab exercise files through the Jupyter Notebook interface that you have opened. You could start with *Lab_1_summarize_dialogue.ipynb* just by clickihng it that covers prompting and prompt engineering practices. Instruction and LoRA PEFT fine-tunings are discussed in Lab2 and RLHF practices are in Lab3. 
 
-Here is a **QuickStart copy and paste guide** that makes it easy to get hands-on exercises for *Generative AI with LLMs* kicked off on Neuron, even with no installation and creation of the conda virtual environment required, by leveraging the Singularity *genai* container image located in the /apps/applications/singularity_images/ngc directory. Let's assume that you are logged on in the Neuron system.
+Here is a **QuickStart copy-and-paste guide** that allows you to quickly start hands-on exercises for Generative AI with LLMs on Neuron. You can begin without the need for the conda installation and creating a virtual environment by utilizing the Singularity genai container image, located in the /apps/applications/singularity_images/ngc directory on Neuron.
 
+Let's assume that you are logged on in the Neuron system.
 ```
 [glogin01]$ cd /scratch/$USER
 [glogin01]$ git clone https://github.com/hwang2006/Generative-AI-with-LLMs.git
