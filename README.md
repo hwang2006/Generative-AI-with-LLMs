@@ -357,9 +357,9 @@ Submitted batch job XXXXXX
 ```
 
 ## Lab Exercises with a QuickStart Guide
-Now, you are ready to do Generative AI with LLMs practices either using the *genai* conda environment that you have created or the *genai* container image available in thr cloning this GitHub repository on your scratch directory (e.g., /scratch/$USER), you should able to see the lab exercise files through the Jupyter Notebook interface that you have opened. You could start with *Lab_1_summarize_dialogue.ipynb* just by clickihng it that covers prompting and prompt engineering practices. Instruction and LoRA PEFT fine-tunings are discussed in Lab2 and RLHF practices are in Lab3. 
+Now, you are ready to do Generative AI with LLMs practices either using the *genai* conda environment that you have created or the *genai* container image. You may want to clone this GitHub repository on your scratch directory (e.g., /scratch/$USER), and you should able to see the lab exercises jupyter notebook codes via the Jupyter Notebook interface that you have launched. You could start with *Lab_1_summarize_dialogue.ipynb* just by clickihng it that covers prompting and prompt engineering practices. Instruction and LoRA PEFT fine-tunings are discussed in Lab_2 and RLHF practices are in Lab_3. 
 
-Here is a **QuickStart copy-and-paste guide** that allows you to quickly start hands-on exercises for Generative AI with LLMs on Neuron. You can begin without the need for the conda installation and creating a virtual environment by utilizing the Singularity genai container image, located in the /apps/applications/singularity_images/ngc directory on Neuron.
+Here is a **QuickStart copy-and-paste guide** that lets you jump right in the hands-on exercises for Generative AI with LLMs on Neuron, no conda installation and the conda virtual environment required. Simply leverage the pre-built Singularity *genai* container image, readily available in the /apps/applications/singularity_images/ngc directory.
 
 Let's assume that you are logged on in the Neuron system.
 ```
