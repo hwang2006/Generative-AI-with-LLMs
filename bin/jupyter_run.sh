@@ -30,7 +30,7 @@ echo "ssh -L localhost:8888:${SERVER}:${PORT_JU} ${USER}@neuron.ksc.re.kr"
 #echo "ssh -L localhost:${PORT_JU}:${SERVER}:${PORT_JU} ${USER}@neuron.ksc.re.kr"
 
 echo "load module-environment"
-module load gcc/10.2.0 cuda/11.6
+module load gcc/10.2.0 cuda/12.3
 
 echo "execute jupyter"
 source ~/.bashrc
