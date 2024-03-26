@@ -8,8 +8,8 @@ conda update --all
 conda install jupyter chardet cchardet -y
 conda install -c conda-forge jupytext -y
 echo "PIP installing torchdata transformers datasets"
-pip install torch==1.13.0 torchdata transformers datasets
+pip install torch torchdata transformers==4.38.2 datasets
 echo "PIP installing evaluate rouge_score loralib peft"
-pip install evaluate rouge_score loralib peft
+pip install evaluate rouge_score loralib peft==0.5.0
 echo "PIP tri..."
 pip install git+https://github.com/lvwerra/trl.git@25fa1bd
