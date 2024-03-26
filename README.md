@@ -178,14 +178,12 @@ In order to do so, you need to add the "genai" virtual envrionment that you have
 ```
 2. install Jupyter on the virtual environment:
 ```
-(genai) [glogin01]$ conda install jupyter notebook=6.5.4 chardet cchardet 
-
-(genai) [glogin01]$ pip install jupyter-tensorboard # somehow not compatiable with notebook 7.0.x version  
+(genai) [glogin01]$ conda install jupyter chardet cchardet 
+  
 ```
 3. add the virtual environment as a jupyter kernel:
 ```
-(genai) [glogin01]$ pip install ipykernel 
-(genai) [glogin01]$ python -m ipykernel install --user --name genai
+(genai) [glogin01]$ pip install ipykernel; python -m ipykernel install --user --name genai
 ```
 4. check the list of kernels currently installed:
 ```
@@ -233,7 +231,7 @@ echo "ssh -L localhost:8888:${SERVER}:${PORT_JU} ${USER}@neuron.ksc.re.kr"
 #echo "ssh -L localhost:${PORT_JU}:${SERVER}:${PORT_JU} ${USER}@neuron.ksc.re.kr"
 
 echo "load module-environment"
-module load gcc/10.2.0 cuda/11.6
+module load gcc/10.2.0 cuda/12.3
 
 echo "execute jupyter"
 source ~/.bashrc
