@@ -359,7 +359,7 @@ Now, you are ready to do Generative AI with LLMs practices either using the *gen
 
 Here is a **QuickStart guide** that you can copy and paste that lets you jump right in hands-on lab exercises for Generative AI with LLMs on Neuron, no conda installation and the conda virtual environment required. Simply leverage the pre-built Singularity *genai* container image, readily available in the /apps/applications/singularity_images/ngc directory.
 
-Let's assume that you are logged on in the Neuron system.
+Let's assume that you have been logged on in the Neuron system.
 ```
 [glogin01]$ cd /scratch/$USER
 [glogin01]$ git clone https://github.com/hwang2006/Generative-AI-with-LLMs.git
