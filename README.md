@@ -423,7 +423,7 @@ Submitted batch job XXXXXX
 [glogin01]$ cat port_forwarding_command
 ssh -L localhost:8888:gpu##:##### your-account-name@neuron.ksc.re.kr
 ```
-Note that the "sed -i 's/cd \/scratch\/\$USER/...." command above is to replace "cd /scratch/$USER" with "cd /scratch/$USER/Generative-AI-with-LLMs" in the jupyter_run_singularity.sh script, aiming to change the working directory of Jupyter Notebook to the git directory that you have cloned. You may also notice that the partition is set to be "amd_a100nv_8" in the script that you may want to switch to different partitions (e.g., cas_v100_4) depending on idle nodes availability.      
+Note that the "sed -i 's/cd \/scratch\/\$USER/...." command above is to replace "cd /scratch/$USER" with "cd /scratch/$USER/Generative-AI-with-LLMs" in the jupyter_run_singularity.sh script, aiming to change the working directory of Jupyter Notebook to the git directory that you have cloned. You may also notice that the partition is set to be "amd_a100nv_8" in the script that you may want to switch to different partitions (e.g., cas_v100_4) depending on idle nodes availability. Please refer to the shell script, "start-jupyter-with-singularity.sh" in the bin directory of this GitHub repository.   
 
 Once the jupyter server is up and running on a computer node, you can open a new terminal to make a SSH client connection using the port_forwarding_command and then open a web browser to launch a Jupyter client interface as described in the last part of the [Running Jupyter](#running-jupyter) section.  
 
