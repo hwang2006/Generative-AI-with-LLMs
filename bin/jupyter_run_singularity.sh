@@ -1,10 +1,10 @@
 #!/bin/bash 
 #SBATCH --comment=pytorch
 ##SBATCH --partition=mig_amd_a100_4
-#SBATCH --partition=amd_a100nv_8
+##SBATCH --partition=amd_a100nv_8
 ##SBATCH --partition=cas_v100nv_8
 ##SBATCH --partition=cas_v100_4
-##SBATCH --partition=edu
+#SBATCH --partition=edu
 #SBATCH --time=12:00:00        # walltime
 #SBATCH --nodes=1             # the number of nodes 
 #SBATCH --ntasks-per-node=1   # number of tasks per node
