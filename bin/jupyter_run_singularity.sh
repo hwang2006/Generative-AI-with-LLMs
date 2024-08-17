@@ -1,7 +1,7 @@
 #!/bin/bash 
 #SBATCH --comment=pytorch
-##SBATCH --partition=mig_amd_a100_4
-#SBATCH --partition=amd_a100nv_8
+#SBATCH --partition=mig_amd_a100_4
+##SBATCH --partition=amd_a100nv_8
 ##SBATCH --partition=cas_v100nv_8
 ##SBATCH --partition=cas_v100_4
 ##SBATCH --partition=edu
