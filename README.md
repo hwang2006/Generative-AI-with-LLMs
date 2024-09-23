@@ -172,7 +172,7 @@ Executing transaction: done
 </p>
 
 In order to do so, you need to add the "genai" virtual envrionment that you have created as a python kernel.
-1. activate the horovod-enabled virtual environment:
+1. activate the `genai` virtual environment:
 ```
 [glogin01]$ conda activate genai
 ```
